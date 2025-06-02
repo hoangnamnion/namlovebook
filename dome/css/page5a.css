@@ -23,7 +23,7 @@ body {
     font-family: 'Orbitron', 'Courier New', monospace;
     perspective: 1500px;
     cursor: grab;
-    touch-action: none;
+    
     -webkit-tap-highlight-color: transparent;
     background-color: #000;
 }
@@ -249,12 +249,12 @@ body:active {
 }
 
 .back-button {
-    position: absolute;
+    position: fixed;
     top: 15px;
     left: 15px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
-    padding: 12px 24px;
+    padding: 12px 20px;
     border-radius: 50px;
     color: #ff6b9d;
     text-decoration: none;
@@ -263,10 +263,10 @@ body:active {
     border: 1px solid rgba(255, 107, 157, 0.3);
     box-shadow: 0 0 10px rgba(255, 107, 157, 0.3);
     transition: all 0.3s ease;
+    z-index: 9999;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
     cursor: pointer;
-    pointer-events: auto;
     display: inline-block;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
@@ -274,7 +274,11 @@ body:active {
 
 .back-button:active {
     transform: scale(0.95);
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.mobile-exit-button {
+    display: none;
 }
 
 /* Mobile specific styles */
@@ -304,7 +308,12 @@ body:active {
     .back-button {
         padding: 15px 25px;
         font-size: 15px;
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.5);
+        border-width: 2px;
+        top: 20px;
+        left: 20px;
+        min-width: 120px;
+        text-align: center;
     }
 
     .love-counter {
