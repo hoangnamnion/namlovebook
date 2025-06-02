@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FFE4E1, #ff8e8e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.intro-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #ff4757;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+p {
+    color: #2f3542;
+    margin: 15px 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.price {
+    font-size: 1.4em !important;
+    color: #ff4757;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.contact-link, .demo-link {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 15px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-link {
+    background: #ff4757;
+    color: white;
+}
+
+.demo-link {
+    background: #2f3542;
+    color: white;
+}
+
+.contact-link:hover, .demo-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link:hover {
+    background: #ff6b6b;
+}
+
+.demo-link:hover {
+    background: #3f4451;
+}
+
+.features {
+    background: rgba(255, 71, 87, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.features p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.features i {
+    color: #ff4757;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-link i, .demo-link i {
+    margin-right: 8px;
+}
+
+h1 i {
+    color: #ff4757;
+    margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+    .intro-container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .contact-link, .demo-link {
+        width: 100%;
+        margin: 10px 0;
+    }
+} 
